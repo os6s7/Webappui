@@ -1,9 +1,4 @@
 import { createApp } from 'vue';
+import App from './App.vue';
 
-createApp({
-  data() {
-    return {
-      message: 'هلا والله من Vue على Replit!'
-    }
-  }
-}).mount('#app');
+createApp(App).mount('#app');
