@@ -1,7 +1,18 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [react()],
+  server: {
+    port: process.env.PORT || 3000,
+    strictPort: true,
+  },
+  preview: {
+    port: process.env.PORT || 3000,
+    strictPort: true,
+  },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+  }
 })
