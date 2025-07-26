@@ -1,17 +1,17 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "index.html",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist"
       }
     }
   ],
-  "build": {
-    "env": {
-      "NODE_VERSION": "20.x"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
-  }
+  ]
 }
